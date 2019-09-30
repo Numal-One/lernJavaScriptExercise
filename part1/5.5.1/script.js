@@ -1,5 +1,9 @@
-let inputStr = 'list-style-image';
-console.log(camelize(inputStr));
+let inputStr1 = "-webkit-transition";
+let inputStr2 = "list-style-image";
+let inputStr3 = "background-color";
+console.log(camelize(inputStr1));
+console.log(camelize(inputStr2));
+console.log(camelize(inputStr3));
 
 function camelize(str){
  str = str.split('-');

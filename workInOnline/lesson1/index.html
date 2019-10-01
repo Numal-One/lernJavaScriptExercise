@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOM fully loaded and parsed', document.querySelector('div').offsetWidth);
+    });
+    window.addEventListener('load', () => {
+      console.log('DOM loaded', document.querySelector('div').offsetWidth);
+    });
+  </script>
+  
+  <script src="script.js" type = "" defer></script>
+  <script src="index.js" type = "" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  
+  <div>JS</div>
+  <script> console.log(document.querySelector('div').offsetWidth);</script>
+  <img src="1.jpg" alt="jpg">
+</body>
+</html>

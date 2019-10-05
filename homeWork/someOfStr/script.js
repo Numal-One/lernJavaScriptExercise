@@ -1,4 +1,4 @@
-// 'aaabbccdda' => '3a2b2c2d1a' 3a2b2c2d1a
+// 'aaabbccdda' => '3a2b2c2d1a'
 
 let str1 = 'aaabbccdda';
 console.log(doSome(str1));

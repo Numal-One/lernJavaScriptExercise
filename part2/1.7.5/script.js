@@ -26,18 +26,17 @@ let data = {
 
   function createTree(target, obj) {
     let ul = createUl(obj);
-    console.log(`ul - ${ul}`);
     target.append(ul);
   }
 
   function createUl(obj) {
     let ul = document.createElement('ul');
-    let keys = Object.keys(obj);
-    for (let key in keys) {
+    let objKeys = Object.keys(obj);
+    for (let arrKey in objKeys) {
         let li = document.createElement('li');
-        li.innerText = `${keys[key]}`;
-        if((typeof obj[keys[key]]) === 'object') {
-            let innerUi = createUl(obj[keys[key]]);
+        li.innerText = `${objKeys[arrKey]}`;
+        if((typeof obj[objKeys[arrKey]]) === 'object') {
+            let innerUi = createUl(obj[objKeys[arrKey]]);
             li.append(innerUi);
         }
         ul.append(li);

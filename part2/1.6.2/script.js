@@ -1,8 +1,8 @@
-let link = document.querySelectorAll('ul a');
-for (let el of link) {
-  let linkCont = el.getAttribute("href");
-  if (linkCont.includes('://') && (!linkCont.includes('http://internal.com'))) {
-    el.style.color = 'orange';
-  }
-  console.log (el.href, el.getAttribute('href'));
-}
+let links = document.body.querySelectorAll('ul a');
+for (let link of links) {
+    let linkAttr = link.getAttribute('href');
+    if (linkAttr.includes('://') && !(linkAttr.includes('http://internal.com'))) {
+        link.style.color = 'orange';
+    }
+    
+};

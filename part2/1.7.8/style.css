@@ -1,0 +1,40 @@
+.container {
+    width: 80%;
+    margin: 100px auto;
+    background-color: wheat;
+    padding: 50px 0;
+}
+
+.hours, .minutes, .seconds {
+    width: auto;
+    text-align: center;
+}
+.hours{color: orange;}
+.hours::first-letter{color: red;}
+.minutes{color: green;}
+.minutes::first-letter{color: yellow;}
+.seconds{color: purple;}
+.seconds::first-letter{color: blue;}
+
+.hours::after, .minutes::after  {
+    color:black;
+    content: ':';
+}
+
+.clock_header {
+    text-align: center;
+}
+
+.clock {
+    font-family: 'PT Mono', monospace;
+    display: flex;
+    justify-content: center;
+    font-size: 150px;
+}
+
+.buttons {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}

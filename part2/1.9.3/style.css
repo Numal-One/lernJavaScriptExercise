@@ -12,4 +12,12 @@
       
     }
 
+    h3 {
+      text-align: center;
+    }
+
+    .btn-ball-to-center {
+      position: fixed;
+      top: 20px;
+    }
     

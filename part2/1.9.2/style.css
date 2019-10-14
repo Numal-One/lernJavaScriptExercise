@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.scroll_16::-webkit-scrollbar {
+  width: 16px;
+  background-color: grey;
+}
+
+.scroll_16::-webkit-scrollbar-thumb {
+  width: 16px;
+  background-color: red;
+}
+
+.scroll_12::-webkit-scrollbar {
+  width: 12px;
+  background-color: grey;
+}
+
+.scroll_12::-webkit-scrollbar-thumb {
+  width: 12px;
+  background-color: red;
+}
+
+.scroll_5::-webkit-scrollbar {
+  width: 5px;
+  background-color: grey;
+}
+
+.scroll_5::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: red;
+}
+
+
+main {
+  height: 500px;
+  overflow: auto;
+  padding: 5px;
+  background-color: wheat;
+}
+
+.outbox {
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  width: 200px;
+  height: 100px;
+  background-color: grey;
+  border-radius: 4px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.out{
+  width: 80%;
+  height: 50%;
+  background-color: rgb(192, 192, 192);
+  border: 1px solid rgb(219, 219, 219);
+  text-align: center;
+  padding-top: 10px;
+}
+
+.btn {
+  width: 50px;
+  height: 20px;
+}

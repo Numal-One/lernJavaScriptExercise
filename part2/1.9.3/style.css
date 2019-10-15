@@ -9,6 +9,9 @@
 
     #ball {
       position: absolute;
+      transition: 1s;
+      top: 0;
+      left: 0;
       
     }
 

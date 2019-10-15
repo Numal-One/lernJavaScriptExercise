@@ -1,0 +1,26 @@
+.opened::before {
+  content: "▼";
+  color: green;
+}
+
+.closed::before {
+  content: "▶";
+  font-size: 13px;
+  color: green;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.header {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.rot {
+  background-color: red;
+  height: 100px;
+  width: 200px;
+}

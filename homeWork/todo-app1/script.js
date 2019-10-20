@@ -146,12 +146,13 @@ function generateTODO(element) {
       el.classList.remove('completed');
       el.querySelector('.toggle').checked = false;
       });
-      return;
-    ;}
-    taskCollection.forEach((el)=>{
-      el.classList.add('completed');
-      el.querySelector('.toggle').checked = true;
-    });
+    } else {
+      taskCollection.forEach((el)=>{
+        el.classList.add('completed');
+        el.querySelector('.toggle').checked = true;
+      });
+    }
+    countActive(ul,count);
   });
 
   

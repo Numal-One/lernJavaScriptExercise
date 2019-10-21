@@ -58,7 +58,18 @@ function generateTODO(element) {
     div.insertAdjacentElement('afterend',input);
     li.classList.add('editing');
     input.focus();
-    
+    // пока существует этот инпут вешаем на него обработчик
+    // при потере фокуса будет сохранять результат изменения
+    input.addEventListener('blur', ({target})=>{
+      if (target.classList.contains('edit')) {
+        let li = target.closest('li');
+        let label = li.querySelector('.view label');
+        let val = target.value;
+        li.classList.remove('editing');
+        label.innerHTML = val;
+        target.remove();
+      }
+    });
     
 
   });
@@ -77,6 +88,8 @@ function generateTODO(element) {
     target.remove();
     
   });
+
+
 
     // события для футера
   footer.addEventListener('click',(e)=>{

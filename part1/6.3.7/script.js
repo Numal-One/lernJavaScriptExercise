@@ -1,22 +1,23 @@
 function makeArmy() {
-  let shooters = [];
+  var shooters = [];
 
-  let i = 0;
+  var i = 0;
   while (i < 10) {
-    // для сохранения для каждой функции "своего" порядкового номера
-    // в ее замыкании добавим переменную а
-    let a = i; 
-    let shooter = function() { // функция shooter
-      console.log( a ); // должна выводить порядковый номер
-    };
-    shooters.push(shooter);
+    
+    function shooter(i){
+      return function() { // функция shooter
+        console.log( i ); // должна выводить порядковый номер
+      };
+    }
+   
+    shooters.push(shooter(i));
     i++;
   }
 
   return shooters;
 }
 
-let army = makeArmy();
+var army = makeArmy();
 
 army[0]();
 army[1]();

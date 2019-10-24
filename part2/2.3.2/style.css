@@ -1,3 +1,8 @@
 li{
   cursor: pointer;
+  display: block;
+}
+
+span:hover {
+  font-weight: bold;
 }

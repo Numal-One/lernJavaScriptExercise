@@ -23,14 +23,14 @@ function drawClock() {
     let currentTime = new Date();
 
     // переменные для текущих значений секунд, минут, часов приведенные к строкам
-    let currentHour = `${currentTime.getHours()}`;
-    let currentMinutes = `${currentTime.getMinutes()}`;
-    let currentSeconds = `${currentTime.getSeconds()}`;
+    let currentHour = currentTime.getHours();
+    let currentMinutes = currentTime.getMinutes();
+    let currentSeconds = currentTime.getSeconds();
 
     // дорисовываем нули в значениях < 10
-    currentHour = (currentHour.length < 2) ? `0${currentHour}` : currentHour;
-    currentMinutes = (currentMinutes.length < 2) ? `0${currentMinutes}` : currentMinutes;
-    currentSeconds = (currentSeconds.length < 2) ? `0${currentSeconds}` : currentSeconds;
+    currentHour = (currentHour < 10) ? `0${currentHour}` : currentHour;
+    currentMinutes = (currentMinutes < 10) ? `0${currentMinutes}` : currentMinutes;
+    currentSeconds = (currentSeconds < 10) ? `0${currentSeconds}` : currentSeconds;
     
     //выводим строки в блоки часов, минут, секунд 
     hours.textContent = `${currentHour}`;

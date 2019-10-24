@@ -11,30 +11,19 @@ function makeBuffer1(){
 
 function makeBuffer2(){
   let bufferVal = '';
-  function returnF(val) {
+  
+  function innerFunc(val) {
     if (val === undefined) {
       return bufferVal;
     }
     bufferVal += val;
   }
-  returnF.prototype.clear = function() {
-    console.log('x');
+
+  innerFunc.clear =  function(){
+    bufferVal = '';
   }
-  console.log(returnF);
-  console.log(returnF.prototype);
-  return returnF;
-  // return function(val) {
-  //   if (val === undefined) {
-  //     return bufferVal;
-  //   }
-  //   bufferVal += val;
-  //   this.prototype.clear = function(){
-     
-  //   }
-  // }
-
-
+  return innerFunc;
 }
 
-// let a = makeBuffer1();
-let b =makeBuffer2();
+
+let buffer = makeBuffer2();

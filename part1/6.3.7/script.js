@@ -6,6 +6,7 @@ function makeArmy() {
     
     function shooter(i){
       return function() { // функция shooter
+        debugger;
         console.log( i ); // должна выводить порядковый номер
       };
     }

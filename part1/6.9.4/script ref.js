@@ -30,6 +30,7 @@ function throttle(func, delay) {
       timeId1 = setTimeout(()=>{
         func(...args);
       },delay);
+      return;
     }
 
     // блок, описывающий вычисления при флаге doIt = true

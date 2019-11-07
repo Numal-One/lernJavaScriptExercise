@@ -5,7 +5,6 @@ class Clock1 {
     }
 
     render() {
-        let temp = this.template;
         let date = new Date();
     
         let hours = date.getHours();
@@ -17,7 +16,7 @@ class Clock1 {
         let secs = date.getSeconds();
         if (secs < 10) secs = '0' + secs;
         
-        let output = temp
+        let output = this.template
           .replace('h', hours)
           .replace('m', mins)
           .replace('s', secs);
@@ -33,8 +32,7 @@ class Clock1 {
       }
 }
 
-// let clock = new Clock({template: 'h:m:s'});
-// clock.start();
+
 
 let clock1 = new Clock1({template: 'h:m:s'});
 clock1.start();

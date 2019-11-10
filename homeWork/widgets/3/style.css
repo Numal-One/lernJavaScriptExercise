@@ -1,7 +1,5 @@
-.target {
-}
 
-.target li {
+.marked-list--itm {
   cursor: pointer;
 }
 

@@ -1,0 +1,12 @@
+.target {
+  background-color: #ccc;
+}
+
+.target li {
+  cursor: pointer;
+}
+
+.marked{
+  background-color: wheat;
+  font-weight: bold;
+}

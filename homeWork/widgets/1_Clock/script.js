@@ -73,6 +73,7 @@ this.stop = stop;
 
 }
 
+
 let clock = new Clock();
 clock.initialization(document.querySelector('.clock-wrapper'));
 

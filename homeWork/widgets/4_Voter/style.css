@@ -1,0 +1,22 @@
+.voter {
+  height: 100px;
+  width: 300px;
+  background-color: wheat;
+  display: flex;
+  justify-content: space-between;
+}
+
+.voter span {
+  display: block;
+  height: 100%;
+  border: 1px solid brown;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  
+}
+
+.up, .down {
+  cursor: pointer;
+}
+

@@ -3,12 +3,13 @@ class Voter {
     this._counter = 0;
     this._target = target;
     this._voter = this._createBlock();
+    this._voterField = this._voter.querySelector('.vote');
     this._addEvListener(this._voter);
     this._insertBlock(this._voter, this._target);
   }
 
+  // метод для создания блока
   _createBlock() {
-    console.log('create');
     let voter = document.createElement('div');
     voter.id = 'voter';
     voter.className = 'voter';
@@ -27,44 +28,55 @@ class Voter {
     return voter;
   }
 
+  // метод для вставки блока в целевой блок
   _insertBlock(block, target){
-    console.log('insert');
     target.insertAdjacentElement('afterbegin', block);
   }
 
+  // метод вешает на блок обработчик
   _addEvListener(targetBlock){
-    console.log('addEvent');
     targetBlock.addEventListener('click',({target})=>{
       this._clickHandler(target);
     });
     
   }
 
+  // функция обработчик
   _clickHandler(target){
-
-    if (!target.classList.contains('up') && !target.calssList.contains('down')) {
-      console.log('return');
+    if (!target.classList.contains('up') && !target.classList.contains('down')) {
       return;
     }
-
-    let voter = this.voter;
 
     if (target.classList.contains('up')) {
-      console.log('up');
+      this._counter++;
+      this._renewCount()
       return;
     }
 
-    if (target.calssList.contains('down')) {
-      console.log('down');
+    if (target.classList.contains('down')) {
+      this._counter--;
+      this._renewCount()
       return;
     }
 
   }
 
+  // функция обновления счетчика. обновляет текст в блоке согласно переменной
+  _renewCount() {
+    this._voterField.textContent = this._counter;
+  }
+
+  // сеттер для голосов
+  set setVote(count){
+    if(typeof count !== "number"){
+      return;
+    }
+    this._counter = count;
+    this._renewCount();
+  }
+
 }
 
-
-
 let target = document.querySelector('.target')
-
-let newVoter = new Voter(target);
+let newVoter1 = new Voter(target);
+let newVoter2 = new Voter(target);

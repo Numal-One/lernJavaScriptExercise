@@ -43,17 +43,19 @@ class Voter {
 
   // функция обработчик
   _clickHandler(target){
-    if (!target.classList.contains('up') && !target.classList.contains('down')) {
+    let upCond = target.classList.contains('up');
+    let downCond = target.classList.contains('down');
+    if (!upCond && !downCond) {
       return;
     }
 
-    if (target.classList.contains('up')) {
+    if (upCond) {
       this._counter++;
       this._renewCount()
       return;
     }
 
-    if (target.classList.contains('down')) {
+    if (downCond) {
       this._counter--;
       this._renewCount()
       return;

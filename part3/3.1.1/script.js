@@ -1,8 +1,6 @@
 const PATH = 'https://api.github.com/users/';
-const PATH2 = '/homeWork/phone-catalog-static/phones-my/phones/phones.json';
 
-
-const users = ['Numal-One', 'Owll223', 'Owlllz'];
+const users = ['Numal-One', 'Owll', 'Owlllz'];
 
 function getUsers(users){
   let result = [];
@@ -19,17 +17,20 @@ function getUsers(users){
 
 async function getUsers(users){
   let result = [];
-  result = await Promise.all(users.map((user)=>{
+  return Promise.all(users.map(async (user)=>{
     
-    fetch(`${PATH}${user}`)
+    let respons = fetch(`${PATH}${user}`)
     .then(
-      (response)=>{
-       response.json();
+      function(response){
+      let res = response.json();
+      console.log(res);
+      return res;
     });
+   
     
   }));
   
- return result;
+ 
 }
 
 
